@@ -10,7 +10,7 @@ resource "aws_route_table" "my-public-rt" {
     
     route {
         
-        cidr_block = "0.0.0.0/0" 
+        cidr_block = var.route_cidr_block
         
         gateway_id = "${aws_internet_gateway.my-igw.id}" 
     }
@@ -32,14 +32,14 @@ resource "aws_security_group" "ssh-rule" {
         from_port = 0
         to_port = 0
         protocol = -1
-        cidr_blocks = ["0.0.0.0/0"]
+        cidr_blocks = [var.sg_cidr_block]
     }
     ingress {
         from_port = 22
         to_port = 22
         protocol = "tcp"
         
-        cidr_blocks = ["0.0.0.0/0"]
+        cidr_blocks = [var.sg_cidr_block]
     }
     tags =  {
         Name = "ssh-rule"
