@@ -28,11 +28,11 @@ variable "sg_cidr_block" {
 }
 
 variable "AMI" {
-    type = map(string)
-    
-    default =  {
-        ap-south-1 = "ami-0bb8408b37500e3be"
-    }
+  type = map(string)
+
+  default = {
+    ap-south-1 = "ami-0bb8408b37500e3be"
+  }
 }
 
 variable "PRIVATE_KEY_PATH" {
