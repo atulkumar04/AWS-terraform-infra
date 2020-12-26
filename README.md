@@ -1,3 +1,3 @@
 # AWS-terraform-infra
 
-Terraform IAC to create a basic infrastructure on AWS.
+Terraform IAAC to create a basic infrastructure on AWS.
