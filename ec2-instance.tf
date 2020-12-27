@@ -9,7 +9,7 @@ resource "aws_instance" "my-ec2-instance" {
 
   key_name = "${aws_key_pair.mumbai-region-key-pair.id}"
 
- 
+
 }
 resource "aws_key_pair" "mumbai-region-key-pair" {
   key_name   = "mumbai-region-key-pair"

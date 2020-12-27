@@ -15,7 +15,6 @@ variable "subnet_cidr_block" {
   type        = string
   default     = "10.0.1.0/24"
 }
-
 variable "route_cidr_block" {
   description = "CIDR block for VPC"
   type        = string
